@@ -1,0 +1,9 @@
+const { searchproducts, getallproducts, getproduct } = require('../controllers/productcontroller')
+
+const publicrouter = require('express').Router()
+
+publicrouter.get('/products', getallproducts)
+publicrouter.get('/product/:id', getproduct)
+publicrouter.get('/search?',searchproducts)
+
+module.exports = publicrouter
